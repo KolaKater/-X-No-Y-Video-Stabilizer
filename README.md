@@ -66,39 +66,6 @@ A Windows GUI tool for stabilizing **horizontal (X-only) shake** in old / handhe
 - Old video with strong parallax: `Mesh Heavy` helps, but it is slower.
   老视频视差大：`Mesh Heavy` 有用，但更慢。
 
-## Build from source / 从源码打包 EXE
-
-Requires Windows + Python 3.11. 需要 Windows + Python 3.11。
-
-```bat
-REM 1. Put ffmpeg.exe / ffprobe.exe in bin\
-REM    把 ffmpeg.exe / ffprobe.exe 放进 bin\
-
-REM 2. Build (double-click, or run in CMD)
-REM    打包（双击或在 CMD 里跑）
-build_exe.bat
-
-REM 3. Output / 输出
-REM    dist\Stablizer\Stablizer.exe   (recommended, onedir)
-REM    or: build_exe.bat onefile  ->  dist\Stablizer.exe (single file, slower startup)
-```
-
-Or manually / 手动打包：
-
-```bat
-pip install opencv-python numpy pillow pyinstaller
-pyinstaller --noconfirm --clean --windowed --name Stablizer ^
-    --add-data "bin;bin" ^
-    --hidden-import cv2 --hidden-import numpy --hidden-import PIL ^
-    --collect-all cv2 --collect-all numpy ^
-    stablizer_gui.py
-```
-
-> Use **onedir** (default) for daily use: faster startup, less likely to trip antivirus, and `bin\ffmpeg.exe` stays a real file.
-> 日常用 **onedir**（默认）：启动更快，不容易被杀毒软件误报，`bin\ffmpeg.exe` 也是真实文件。
-> `onefile` packs everything into one EXE but extracts ~200 MB to a temp folder on every launch.
-> `onefile` 是单个 EXE，但每次启动都要解压约 200 MB 到临时目录。
-
 ## Project structure / 目录结构
 
 ```
