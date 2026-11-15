@@ -1,0 +1,10 @@
+{
+  "lang": "English",
+  "method": "ffmpeg",
+  "fps": "24fps",
+  "save_mode": "mp4",
+  "smoothing": 40,
+  "output_size": "original",
+  "ref": "foreground",
+  "warp": "mesh_light"
+}
