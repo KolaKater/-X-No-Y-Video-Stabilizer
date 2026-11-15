@@ -26,11 +26,8 @@ A Windows GUI tool for stabilizing **horizontal (X-only) shake** in old / handhe
 
 ## Screenshots / 截图
 
-> Put your screenshots here. 截图放这里（建议：主界面 + 处理中 + 结果对比）。
+<img width="859" height="650" alt="Screenshot 2026-11-15 151912" src="https://github.com/user-attachments/assets/09aebc4c-9364-429c-a752-c0c6509014d2" />
 
-| Main Window / 主界面 | Running / 处理中 |
-|---|---|
-| [Main](docs/screenshot-main.png) | [Running](docs/screenshot-running.png) |
 
 ## Download / 下载
 
