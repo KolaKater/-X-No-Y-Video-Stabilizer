@@ -37,8 +37,8 @@ A Windows GUI tool for stabilizing **horizontal (X-only) shake** in old / handhe
    去 Releases 页面下载最新版 `Stablizer-Windows.zip`。
 2. Unzip it anywhere, keep the folder structure (do **not** delete `bin/`).
    解压到任意位置，保持文件夹结构，**不要删 `bin/`**。
-3. Double-click `Stablizer.exe`.
-   双击 `Stablizer.exe`。
+3. Double-click `X-No-Y-Video-Stabilizer.exe`.
+   双击 `X-No-Y-Video-Stabilizer.exe`。
 
 > `bin/` contains `ffmpeg.exe`, `ffprobe.exe`, `stablizer_languages.json` — the EXE needs them next to it.
 > `bin/` 里有 `ffmpeg.exe`、`ffprobe.exe`、`stablizer_languages.json`，EXE 需要它们在旁边。
@@ -73,12 +73,9 @@ ffmpeg/
 ├── stablizer_gui.py            # GUI (Tkinter, drag & drop, 12 languages)
 ├── vid_stablizer.py            # Stabilization core (FFmpeg vidstab + OpenCV X-only)
 ├── Lanch_stablizer_gui.bat     # Launch from source (pythonw, no console window)
-├── build_exe.bat               # Build EXE with PyInstaller
 ├── requirements.txt
 ├── README.md
 └── bin/
-    ├── ffmpeg.exe              # Bundled FFmpeg (Gyan build)
-    ├── ffprobe.exe             # Bundled FFprobe
     ├── stablizer_languages.json  # 12 languages, editable
     └── stablizer_gui_config.json # Saved settings (auto-created)
 ```
@@ -97,11 +94,10 @@ ffmpeg/
 
 | Problem / 问题 | Fix / 解决 |
 |---|---|
-| EXE says ffmpeg not found / EXE 提示找不到 ffmpeg | Keep `bin\ffmpeg.exe` next to `Stablizer.exe`, do not move the EXE alone. 把 `bin\` 整个跟 EXE 放一起，不要只拷一个 EXE。 |
+| EXE says ffmpeg not found / EXE 提示找不到 ffmpeg | Keep `bin\ffmpeg.exe` next to `X-No-Y-Video-Stabilizer.exe`, do not move the EXE alone. 把 `bin\` 整个跟 EXE 放一起，不要只拷一个 EXE。 |
 | Progress stuck at 0% for a while / 进度长时间 0% | Normal on long videos: estimation runs first (0–50%). `Mesh Heavy` on 1080p is slow, wait. 长视频正常：先算估计（0–50%），`Mesh Heavy` 在 1080p 上本来就慢，等一下。 |
 | Output looks wavy / 输出发飘 | Lower smoothing, or switch Reference (Foreground ↔ Background), or Mesh → Light. 降平滑度，或换参考（前景 ↔ 背景），或网格改 Light。 |
 | No effect / 没效果 | Check Method: FFmpeg is subtle on heavy shake, try OpenCV + Mesh Medium/Heavy. 换 OpenCV + 网格 Medium/Heavy。 |
-| Antivirus flags the EXE / 杀毒软件报毒 | Rebuild from source with `build_exe.bat`, or add the folder to exclusions. 用 `build_exe.bat` 自己重新打包，或把文件夹加入白名单。 |
 
 Debug log: `vid_stablizer_debug.log` in the program folder (next to the EXE). Paste it when reporting an issue.
 调试日志：程序目录下的 `vid_stablizer_debug.log`，报问题时贴它。
