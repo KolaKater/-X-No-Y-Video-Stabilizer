@@ -1,11 +1,11 @@
 # Easy3D · X-No-Y Stabilizer & 3D Converter
-<img width="862" height="652" alt="Screenshot 2026-11-17 121024" src="https://github.com/user-attachments/assets/57d4d1b3-a90a-4e62-9adf-03f372c4ef66" />
 
 > 只稳左右（X 轴），不碰上下。Stabilize left–right shake only, leave vertical motion untouched.
 > 再加 3D 格式转换 + Motion Wiggle。Plus 3D format conversion + Motion Wiggle.
 >
 > GitHub: https://github.com/KolaKater/-X-No-Y-Video-Stabilizer
 > © 2026 Tony Lin
+<img width="862" height="652" alt="Screenshot 2026-11-17 121024" src="https://github.com/user-attachments/assets/57d4d1b3-a90a-4e62-9adf-03f372c4ef66" />
 
 一个 Windows 图形界面工具，做两件事，**分开做，不混在一起**：
 
